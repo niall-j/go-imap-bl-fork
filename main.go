@@ -998,10 +998,10 @@ func (d *Dialer) GetOverviews(uids ...int) (emails map[int]*Email, err error) {
 							if err = d.CheckType(t.Tokens[EEName], []TType{TQuoted, TAtom, TNil}, tks, "for %s[%d][%d]", a.debug, i, EEName); err != nil {
 								return nil, err
 							}
-							if err = d.CheckType(t.Tokens[EEMailbox], []TType{TQuoted, TNil}, tks, "for %s[%d][%d]", a.debug, i, EEMailbox); err != nil {
+							if err = d.CheckType(t.Tokens[EEMailbox], []TType{TQuoted, TAtom, TNil}, tks, "for %s[%d][%d]", a.debug, i, EEMailbox); err != nil {
 								return nil, err
 							}
-							if err = d.CheckType(t.Tokens[EEHost], []TType{TQuoted, TNil}, tks, "for %s[%d][%d]", a.debug, i, EEHost); err != nil {
+							if err = d.CheckType(t.Tokens[EEHost], []TType{TQuoted, TAtom, TNil}, tks, "for %s[%d][%d]", a.debug, i, EEHost); err != nil {
 								return nil, err
 							}
 
