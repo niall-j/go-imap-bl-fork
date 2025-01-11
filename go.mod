@@ -1,4 +1,4 @@
-module github.com/BrianLeishman/go-imap
+module github.com/niall-j/go-imap
 
 go 1.19
 
